@@ -8,3 +8,7 @@ r = redis.Redis(host=HOST, port=PORT, decode_responses=False)
 r.hgetall(b'<KEY>')[b'<FIELD>']
 ```
 
+## Join unique lines by comma
+```
+python3 -c 'import sys; x = sys.stdin.read(); j = ",".join(set(x.split())); sys.stdout.write(j)'
+```
