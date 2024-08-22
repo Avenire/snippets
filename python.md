@@ -40,9 +40,9 @@ def hook(pairs, **kwargs):
   
 if __name__ == "__main__":
   with open(
-    sys.argv[0], "r"
-  ) as f, open(
     sys.argv[1], "r"
+  ) as f, open(
+    sys.argv[2], "r"
   ) as f2:
     x = json.load(f, object_hook=hook)
     x2 = json.load(f2, object_hook=hook)
